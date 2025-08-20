@@ -2,14 +2,20 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
+
 import WelcomeMessage from './components/WelcomeMessage'
+import HeaderContent from './components/Header'
+import MainContent from './components/MainContent'
+import FooterContent from './components/Footer'
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
     <>
-
+    <HeaderContent />
+    <MainContent />
+    <FooterContent />
     <WelcomeMessage />
       <div>
         <a href="https://vite.dev" target="_blank">
