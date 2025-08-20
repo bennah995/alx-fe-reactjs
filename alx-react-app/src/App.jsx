@@ -4,9 +4,9 @@ import viteLogo from '/vite.svg'
 import './App.css'
 
 import WelcomeMessage from './components/WelcomeMessage'
-import Header from './assets/Header'
-import MainContent from './assets/MainContent'
-import Footer from './assets/Footer'
+import Header from './components/Header'
+import MainContent from './components/MainContent'
+import Footer from './components/Footer'
 
 function App() {
   const [count, setCount] = useState(0)
