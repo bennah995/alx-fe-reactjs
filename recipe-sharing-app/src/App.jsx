@@ -1,6 +1,6 @@
 import './App.css';
 
-import Recipelist from './components/RecipeList';
+import RecipeList from './components/RecipeList';
 import AddRecipeform from './components/AddRecipeForm';
 
 function App() {
@@ -8,7 +8,7 @@ function App() {
      <div>
       <h1>Recipe Sharing App</h1>
       <AddRecipeform />
-      <Recipelist />
+      <RecipeList />
      </div>
   )
 }
