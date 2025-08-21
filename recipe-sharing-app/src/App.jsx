@@ -1,7 +1,7 @@
-import './App.css'
+import './App.css';
 
-import Recipelist from './components/RecipeList'
-import AddRecipeform from './components/AddRecipeForm'
+import Recipelist from './components/RecipeList';
+import AddRecipeform from './components/AddRecipeForm';
 
 function App() {
   return (
