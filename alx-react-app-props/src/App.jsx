@@ -10,7 +10,7 @@ import Footer from './components/Footer'
 import UserProfile from './components/UserProfile'
 
 import ProfilePage from './components/ProfilePage';
-import { UserContext } from './context/UserContext'
+import { UserContext } from './UserContext'
 
 
 function App() {
