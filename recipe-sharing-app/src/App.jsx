@@ -14,8 +14,7 @@ function App() {
 
       <Routes>
         <Route
-          path="/"
-          element={
+          path="/" element={
             <>
               <AddRecipeForm />
               <RecipeList />
