@@ -1,6 +1,6 @@
 import './App.css';
 
-import { Routes, Route, Link } from 'react-router-dom'
+import {BrowserRouter as Routes, Route, Link } from 'react-router-dom'
 import RecipeDetails from './components/recipeDetails';
 import RecipeList from './components/RecipeList';
 import AddRecipeForm from './components/AddRecipeForm';
