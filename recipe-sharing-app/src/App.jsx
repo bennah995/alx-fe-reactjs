@@ -6,6 +6,8 @@ import RecipeDetails from './components/recipeDetails';
 import RecipeList from './components/RecipeList';
 import AddRecipeForm from './components/AddRecipeForm';
 
+import FavoritesList from './components/FavoritesList';
+import RecommendationsList from './components/RecommendationsList';
 
 import { useParams } from 'react-router-dom';
 
@@ -21,6 +23,8 @@ function App() {
             <>
               <AddRecipeForm />
               <RecipeList />
+              <FavoritesList />
+              <RecommendationsList />
             </>
           }
         />
