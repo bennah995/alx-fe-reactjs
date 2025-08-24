@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { fetchUserData } from "../assets/services/githubService";
+import { fetchUserData } from "../services/githubService";
 
 const Search = () => {
   const [username, setUsername] = useState("");
