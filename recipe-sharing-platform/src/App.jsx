@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 import { useState } from 'react'
 import './App.css'
 import HomePage from './components/HomePage'
-
+import RecipeDetail from './components/RecipeDetail'
 
 
 function App() {
@@ -13,7 +13,7 @@ function App() {
    <Router>
     <Routes>
       <Route path="/" element={<HomePage />} />
-      <Route path="/recipe/:id" element={<R />} />
+      <Route path="/recipe/:id" element={<RecipeDetail />} />
     </Routes>
    </Router>
   )
