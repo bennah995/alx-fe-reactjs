@@ -1,5 +1,7 @@
 import { useParams, useNavigate } from "react-router-dom";
 import recipeData from "../data.json"
+import { useState, useEffect } from "react";
+
 
 const RecipeDetail = () => {
   const { id } = useParams(); //gets recipr id from URL
