@@ -18,7 +18,9 @@ const HomePage = () => {
           <div
             key={recipe.id}
             className="bg-white rounded-lg shadow-md hover:shadow-xl transform hover:scale-105 transition duration-300"
+             onClick={() => Navigate(/recipe/$recipe.id)}
             >
+              
             <img 
               src={recipe.image} alt={recipe.title}
               className="w-full h-48 object-cover rounded-t-lg"
@@ -35,7 +37,7 @@ const HomePage = () => {
         ))}
       </div>
     </div>
-  )
+  );
 }
 
 export default HomePage;
