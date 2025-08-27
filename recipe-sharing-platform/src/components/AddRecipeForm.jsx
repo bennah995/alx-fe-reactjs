@@ -7,6 +7,13 @@ export default function AddRecipeForm({onAddRecipe}){
   const[steps, setSteps] = useState("");
   const [error, setError] = useState("");
 
+  // Validation function
+  const validate = () => {
+    let tempErrors = {};
+    if (!title.trim()) tempErrors.title = "Title is required";
+    if (!description.trim()) tempErrors.description = "Description is required";
+    return tempErrors;
+  };
 
   const handleSubmit = (event) => {
     event.preventDefault();
