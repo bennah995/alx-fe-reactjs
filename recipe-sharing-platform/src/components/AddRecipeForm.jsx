@@ -5,7 +5,7 @@ export default function AddRecipeForm({onAddRecipe}){
   const[title, setTitle] = useState("");
   const[ingredients, setIngredients] = useState("");
   const[steps, setSteps] = useState("");
-  const [error, setError] = useState("");
+  const [errors, setErrors] = useState("");
 
   // Validation function
   const validate = () => {
@@ -19,13 +19,13 @@ export default function AddRecipeForm({onAddRecipe}){
     event.preventDefault();
     
     if(!title || !ingredients || !steps){
-      setError("All Fields must be filled")
+      setErrors("All Fields must be filled")
       return;
     }
 
     const ingredientsArray = ingredients.split(",").map(item => item.trim());
     if(ingredientsArray.length < 2){
-      setError("Please provide at least two ingridients, or use commas(rice, water, chilli etc)")
+      setErrors("Please provide at least two ingridients, or use commas(rice, water, chilli etc)")
       return;
     }
 
@@ -37,7 +37,7 @@ export default function AddRecipeForm({onAddRecipe}){
       steps,
     });
 
-    setError("");
+    setErrors("");
     //reset form
     setTitle("");
     setIngredients("");
