@@ -16,6 +16,8 @@ export default function PostsComponent() {
     {
       staleTime: 5000, // cache freshness
       cacheTime: 1000 * 60 * 5, // how long unused data stays in cache
+      refetchOnWindowFocus: true,
+      keepPreviousData: true,
     }
   );
 
