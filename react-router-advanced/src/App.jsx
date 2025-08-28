@@ -9,6 +9,7 @@ import {
   Outlet,
 } from "react-router-dom";
 import BlogPost from "./components/BlogPost";
+import ProtectedRoute from "./components/ProtectedRoute";
 
 // --- Simulated authentication state ---
 function useAuth() {
@@ -17,12 +18,7 @@ function useAuth() {
 }
 
 // --- Protected Route wrapper ---
-function ProtectedRoute({ isAuthenticated, children }) {
-  if (!isAuthenticated) {
-    return <Navigate to="/login" replace />;
-  }
-  return children;
-}
+
 
 // --- Components ---
 function Home() {
@@ -84,6 +80,14 @@ export default function App() {
       </nav>
 
       <Routes>
+        <Route
+  path="/profile/*"
+  element={
+    <ProtectedRoute isAuthenticated={false}>
+      <Profile />
+    </ProtectedRoute>
+  }
+/>
         <Route path="/" element={<Home />} />
         <Route path="/login" element={<Login auth={auth} />} />
 
