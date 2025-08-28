@@ -8,6 +8,7 @@ import {
   useParams,
   Outlet,
 } from "react-router-dom";
+import BlogPost from "./components/BlogPost";
 
 // --- Simulated authentication state ---
 function useAuth() {
@@ -102,6 +103,7 @@ export default function App() {
 
         {/* Dynamic route */}
         <Route path="/post/:id" element={<Post />} />
+        <Route path="/blog/:id" element={<BlogPost />} />
       </Routes>
     </Router>
   );
