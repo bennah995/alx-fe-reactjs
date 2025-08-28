@@ -7,12 +7,12 @@ export default function RegistrationForm() {
   const [password, setPassword] = useState("");
   const [errors, setErrors] = useState({});
 
-  const handleChange = (e) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value
-    });
-  };
+  // const handleChange = (e) => {
+  //   setFormData({
+  //     ...formData,
+  //     [e.target.name]: e.target.value
+  //   });
+  // };
 
   const validate = () => {
     let newErrors = {};
@@ -30,13 +30,15 @@ export default function RegistrationForm() {
       return;
     }
     alert("user registred successfully!")
+
+      //Clear inputs and errors
+    setUsername("");
+    setEmail("");
+    setPassword("");
+    setErrors({});
   };
 
-// //Clear inputs and errors
-//   setUsername("");
-//   setEmail("");
-//   setPassword("");
-//   setErrors({});
+
 
 
   return(
@@ -47,7 +49,7 @@ export default function RegistrationForm() {
         name="username"
         placeholder="John Doe"
         value={username}
-        onChange={handleChange}
+        onChange={(e) => setUsername(e.target.value)}
       />
       {errors.username && <p style={{color: "red"}}>{errors.username}</p>}
 
@@ -56,7 +58,7 @@ export default function RegistrationForm() {
         name="email"
         placeholder="johdoe@gmail.com"
         value={email}
-        onChange={handleChange}
+        onChange={(e) => setEmail(e.target.value)}
       />
       {errors.email && <p style={{color: "red"}}>{errors.email}</p>}
 
@@ -65,7 +67,7 @@ export default function RegistrationForm() {
         name="password"
         placeholder="Password"
         value={password}
-        onChange={handleChange}
+        onChange={(e) => setPassword(e.target.value)}
       />
       {errors.password && <p style={{color: "red"}}>{errors.password}</p>}
 
