@@ -16,9 +16,16 @@ export default function RegistrationForm() {
 
   const validate = () => {
     let newErrors = {};
-    if(!username) newErrors.username = "Username is required";
-    if(!email) newErrors.email = "Email is required";
-    if(!password) newErrors.password = "Password is required"
+    if(!username){
+      newErrors.username = "Username is required";
+    } 
+    if(!email){
+      newErrors.email = "Email is required";
+    } 
+    if(!password){
+      newErrors.password = "Password is required";
+    }
+    
     return newErrors;
   };
 
